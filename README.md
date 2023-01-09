@@ -6,7 +6,7 @@ Composer is the easiest way to manage dependencies in your project. Create a fil
 ```json
 {
     "require": {
-       "namdongvando/phpqrcode": "^1.1.5"
+       "namdongvando/phpqrcode": "^1.16"
     }
 }
 ```
