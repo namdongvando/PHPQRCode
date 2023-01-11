@@ -6,7 +6,7 @@ Composer is the easiest way to manage dependencies in your project. Create a fil
 ```json
 {
     "require": {
-       "namdongvando/phpqrcode": "^1.16"
+       "namdongvando/phpqrcode": "^1.61"
     }
 }
 ```
@@ -26,6 +26,6 @@ $qrcode = new QRCODECLASSS();
 $qrcode->data = "namdong92@gmail.com";
 $qrcode->size = "7";
 $qrcode->level = 1;
-$qrcode->Images((array) $qrcode);
+$qrcode->Images();
  
 ```
