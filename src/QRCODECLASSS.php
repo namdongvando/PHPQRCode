@@ -10,6 +10,12 @@ class QRCODECLASSS
     public $size;
     public $data;
 
+    public function __construct($item = null)
+    {
+        $this->level = $item["level"] ?? null;
+        $this->size = $item["size"] ?? null;
+        $this->data = $item["data"] ?? null;
+    }
     public function _RequsetData($item = null)
     {
         $this->level = $item["level"] ?? null;
@@ -17,7 +23,7 @@ class QRCODECLASSS
         $this->data = $item["data"] ?? null;
     }
 
-    public function Images($_Requsest)
+    public function Images()
     {
         $_REQUEST["level"] = $this->level;
         $_REQUEST["size"] = $this->size;
