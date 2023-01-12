@@ -28,7 +28,9 @@ class QRCODECLASSS
         $_REQUEST["level"] = $this->level;
         $_REQUEST["size"] = $this->size;
         $_REQUEST["data"] = $this->data;
+        // $this->redDirectoryByPath("temp/");
         include(__DIR__ . "/index.php");
     }
 
+    
 }

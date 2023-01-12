@@ -2,6 +2,20 @@
 include(__DIR__ . "/qrlib.php");
 $PNG_TEMP_DIR = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'temp' . DIRECTORY_SEPARATOR;
 $PNG_WEB_DIR = 'temp/';
+
+if ($dh = opendir($PNG_TEMP_DIR)) {
+    while (($file = readdir($dh)) !== false) {
+        if ($file != "." && $file != "..") {
+            $fileName = $PNG_TEMP_DIR . $file;
+
+            if (time() - fileatime($fileName) > 3600) {
+                unlink($fileName);
+            }
+        }
+    }
+    closedir($dh);
+}
+
 if (!file_exists($PNG_TEMP_DIR))
     mkdir($PNG_TEMP_DIR);
 $filename = $PNG_TEMP_DIR . 'test.png';
